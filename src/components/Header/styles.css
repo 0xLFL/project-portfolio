@@ -13,12 +13,10 @@
   justify-content: space-between;
 
   color: var(--text-color);
-  background-color: var(--background);
 }
 
 .header-container.alt {
   color: var(--alt-text-color);
-  background-color: var(--alt-background);
 }
 
 .header-element-container,
