@@ -6,7 +6,7 @@ import { FiGithub } from "react-icons/fi";
 import './styles.css';
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState<Boolean>(false);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -52,6 +52,7 @@ const Header = () => {
   )
 
   const HeaderDropDownButton = ({ label, to }: { label: string, to: string }) => {
+    console.log(to)
     return (
       <button
         className='header-dropdown-button h1'
