@@ -42,7 +42,7 @@ export const useContainer = (): UseContainerHook => {
 
 const containerStyles = {
   height: '100vh',
-  padding: '25px'
+  padding: '3vh 25px',
 }
 
 export function ContainerProvider({ children }: { children: React.ReactNode }) {
