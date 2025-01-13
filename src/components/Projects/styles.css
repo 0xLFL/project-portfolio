@@ -1,2 +1,61 @@
 
+.home-container.project {
+  height: auto;
+}
 
+.project-contianer {
+  display: flex;
+  padding: 0 3vw;
+}
+
+.project-img {
+  height: 30vh;
+}
+
+.project-info-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 15px;
+}
+
+.project-info-container.name {
+  max-width: 65%;
+}
+
+.project-info-container.apart {
+  justify-content: space-between;
+}
+
+.project-text {
+  color: var(--text-color);
+}
+
+.project-text.title {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.project-text.link{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+  text-decoration: underline;
+}
+
+.project-div-line {
+  height: 2px;
+  background: var(--text-color);
+}
+
+.project-info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
