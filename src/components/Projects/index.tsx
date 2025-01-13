@@ -4,6 +4,14 @@ import './styles.css';
 import Link from 'next/link';
 import { FaArrowRight } from "react-icons/fa";
 
+export interface Project_ {
+  name: string,
+  description: string,
+  repo: string,
+  img: string,
+  example: string,
+}
+
 const Project = ({
   name,
   description,
@@ -40,7 +48,7 @@ const Projects = () => {
   const blockRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const projects: any[] = [{
+  const projects: Project_[] = [{
     name: 'Project one',
     description: 'This is the description for project one',
     repo: 'project-portfolio',
@@ -65,22 +73,6 @@ const Projects = () => {
     img: 'https://symphonious-selkie-ebdd8f.netlify.app/EXOSOC_Logo.JPEG',
     example: 'https://github.com/0xLFL',
   }];
-
-  const checkVisibility = (elementRef: React.RefObject<HTMLDivElement>): boolean => {
-    const rect = elementRef.current?.getBoundingClientRect();
-    if (rect) {
-      // Check if the element is within the viewport
-      console.log({top: rect.top, left: rect.left, bottom: rect.bottom, right: rect.right, height: window.innerHeight, width: window.innerWidth})
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= window.innerHeight &&
-        rect.right <= window.innerWidth
-      );
-    }
-
-    return false;
-  };
 
   useEffect(() => {
     console.log('####', blockRef.current, blockRef.current?.clientHeight)
