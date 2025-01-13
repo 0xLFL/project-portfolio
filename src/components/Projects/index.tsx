@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import './styles.css';
 import Link from 'next/link';
 import { FaArrowRight } from "react-icons/fa";
@@ -43,37 +43,39 @@ const Project = ({
 const Line = () => (<div className='project-div-line'></div>)
 
 const Projects = () => {
-  const [scrollValue, setScrollValue] = useState(0);
-  const [blockHeight, setBlockHeight] = useState(1);
+  // const [scrollValue, setScrollValue] = useState(0);
+  // const [blockHeight, setBlockHeight] = useState(1);
   const blockRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  console.log(process.env)
 
   const projects: Project_[] = [{
-    name: 'Project one',
+    name: 'Snake',
     description: 'This is the description for project one',
-    repo: 'project-portfolio',
-    img: 'https://symphonious-selkie-ebdd8f.netlify.app/EXOSOC_Logo.JPEG',
-    example: 'https://github.com/0xLFL',
+    repo: 'snake',
+    img: 'https://symphonious-selkie-ebdd8f.netlify.app/file.svg',
+    example: 'https://snake-0xlfl.netlify.app',
   }, {
     name: 'Project two',
     description: 'This is the description for project two',
     repo: 'project-portfolio',
-    img: 'https://symphonious-selkie-ebdd8f.netlify.app/EXOSOC_Logo.JPEG',
+    img: 'https://symphonious-selkie-ebdd8f.netlify.app/file.svg',
     example: 'https://github.com/0xLFL',
   }, {
     name: 'Project three',
     description: 'This is the description for project three',
     repo: 'project-portfolio',
-    img: 'https://symphonious-selkie-ebdd8f.netlify.app/EXOSOC_Logo.JPEG',
+    img: 'https://symphonious-selkie-ebdd8f.netlify.app/file.svg',
     example: 'https://github.com/0xLFL',
   }, {
     name: 'Project four',
     description: 'This is the description for project four',
     repo: 'project-portfolio',
-    img: 'https://symphonious-selkie-ebdd8f.netlify.app/EXOSOC_Logo.JPEG',
+    img: 'https://symphonious-selkie-ebdd8f.netlify.app/file.svg',
     example: 'https://github.com/0xLFL',
   }];
 
+  /*
   useEffect(() => {
     console.log('####', blockRef.current, blockRef.current?.clientHeight)
     if (blockRef.current) {
@@ -117,9 +119,10 @@ const Projects = () => {
       window.removeEventListener('wheel', handleWheel);
     };
   }, [])
+  */ 
 
   return (
-    <div ref={containerRef} style={{ height: '80vh', overflow: 'hidden' }} id='projects-container' className='home-container project'>
+    <div ref={containerRef} id='projects-container' className='home-container project'>
       <h1 className='h1 home-title'>
         My Projects
       </h1>
