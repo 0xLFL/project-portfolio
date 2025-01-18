@@ -1,0 +1,23 @@
+
+.notable-course-container,
+.education-details-container,
+.education-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.notable-course-container,
+.education-wrapper {
+  gap: 2vh;
+}
+
+.education-details-container {
+  gap: 4vh;
+}
+
+.education-wrapper {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+}
+

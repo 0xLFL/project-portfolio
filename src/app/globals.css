@@ -43,22 +43,39 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.h1 {
+h1, h2, h3, h4, p {
   color: var(--text-color);
+}
+
+h1,
+.h1 {
   font-size: 1.8rem;
 }
 
+h2,
 .h2 {
-  color: var(--text-color);
   font-size: 1.6rem;
 }
 
+h3,
 .h3 {
-  color: var(--text-color);
   font-size: 1.4rem;
 }
 
+h4,
 .h4 {
-  color: var(--text-color);
+  font-weight: bold;
   font-size: 1.2rem;
+}
+
+p,
+.p {
+  font-size: 1.2rem;
+}
+
+
+
+.home-page-body-container {
+  height: 86vh;
+  overflow: scroll;
 }

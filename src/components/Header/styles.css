@@ -11,6 +11,7 @@
 .header-container {
   display: flex;
   justify-content: space-between;
+  height: 8vh;
 
   color: var(--text-color);
 }
@@ -36,6 +37,7 @@
 
 .toggle-menu-label-chevron {
   transform: rotateX(0deg);
+  transform-style: preserve-3d;
   transition: transform var(--menu-open-duration);
 }
 
