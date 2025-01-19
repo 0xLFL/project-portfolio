@@ -1,0 +1,8 @@
+{
+  "grades": {
+    "hd": "High Distinction",
+    "d": "Distinction",
+    "c": "Credit",
+    "p": "Pass"
+  }
+}

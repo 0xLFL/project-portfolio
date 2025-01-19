@@ -1,16 +1,24 @@
+import { Config } from '@/app/[route]/page';
 import React from 'react';
 import './styles.css'
 
-const Home = () => {
+const Home = ({ config }: { config: Config }) => {
+  if (!config) {
+    return (<div></div>);
+  }
+
+  const {
+    welcomeMessageLarge,
+    welecomeMessageSmall,
+  } = config;
   return (
     <div id='home-container' className='home-container'>
       <div className='home-text-container'>
         <h1 className='h1 home-title'>
-          Hey, my name is Luke
+          {welcomeMessageLarge}
         </h1>
         <h2 className='h2 home-description'>
-          I’m a recently graduate from the University of New South Wales (Sydney),
-          Bachelor of Computer Science Program
+          {welecomeMessageSmall}
         </h2>
       </div>
     </div>

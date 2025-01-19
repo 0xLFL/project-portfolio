@@ -73,9 +73,17 @@ p,
   font-size: 1.2rem;
 }
 
-
-
 .home-page-body-container {
   height: 86vh;
   overflow: scroll;
+}
+
+/* For webkit-based browsers (Chrome, Edge, Safari) */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
